@@ -29,6 +29,13 @@ function searchRecommendations(fullData) {
     Object.keys(fullData).forEach((key) => {
         if (key.toLowerCase().includes(searchValue)) {
             filteredData = fullData[key];
+        } else if (searchValue.includes("country")) {
+            fullData.countries.forEach((country) => {
+                filteredData = filteredData.concat(country.cities);
+            });
+
+            // Display 3 random recommendations.
+            filteredData = getRadomRecommendations(filteredData);
         }
     });
 
@@ -93,6 +100,15 @@ function getCurrentTime(timeZone) {
         hour12: true,
     };
     return date.toLocaleDateString("en-US", options);
+}
+
+function getRadomRecommendations(array) {
+    const randomRecommendations = [];
+    for (let i = 0; i < 3; i++) {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        randomRecommendations.push(array[randomIndex]);
+    }
+    return randomRecommendations;
 }
 
 searchButton.addEventListener("click", fetchTravelData);
