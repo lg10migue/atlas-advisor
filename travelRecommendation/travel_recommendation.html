@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atlas Advisor</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="travel_recommendation.css" />
+    </head>
+    <body>
+        <nav>
+            <div>
+                <a href="travel_recommendation.html">Home</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="search-bar">
+                <input
+                    type="text"
+                    placeholder="Enter a destination or keyword"
+                    id="search-input"
+                />
+                <button type="button" id="search-btn">Search</button>
+                <button type="button" id="clear-btn">Clear</button>
+            </div>
+        </nav>
+        <div class="background-image">
+            <div class="home-content" id="content-container">
+                <div class="intro">
+                    <h1>EXPLORE DREAM DESTINATION</h1>
+                    <p>
+                        It encourages exploration of unfamiliar territories,
+                        embracing diverse cultures and landscapes, while
+                        pursuing the desired destination that captivates the
+                        heart and ignites a sense of wonder.
+                    </p>
+                    <button class="book-btn">BOOK NOW</button>
+                </div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        <footer class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+        </footer>
+        <script src="travel_recommendation.js"></script>
+    </body>
+</html>
